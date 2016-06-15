@@ -5,14 +5,17 @@ import java.security.*;
 public class StringConversion {
 	public static void main(String[] args) {
 		
-		/*Do_Not_Terminate.forbidExit();
+		Do_Not_Terminate.forbidExit();
 
 		try{
 			Scanner in = new Scanner(System.in);
 			int n=in.nextInt();
-			//String s=???; Complete this line below
+			
+			String s=""+n;
+			
 	
 
+			
 			if(n==Integer.parseInt(s))
 			{
 				System.out.println("Good job");
@@ -24,7 +27,7 @@ public class StringConversion {
 		}
 		catch (Do_Not_Terminate.ExitTrappedException e) {
 			System.out.println("Unsuccessful Termination!!");
-		}*/
+			}
 	}
 }
 
