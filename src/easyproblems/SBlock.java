@@ -1,5 +1,4 @@
 package easyproblems;
-import java.math.*;
 import java.util.*;
 
 public class SBlock{
