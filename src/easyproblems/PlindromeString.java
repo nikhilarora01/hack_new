@@ -8,10 +8,8 @@ public class PlindromeString {
 		String a = sc.next();
 		String temp = null;
 		for (int i=0; i<=a.length()-1;i++)
-		{
-			temp=a;
-		}
-		if (temp==a)
+		
+		if (a.charAt(i)==a.charAt(a.length()-1))
 		{
 			System.out.println("Yes");
 		}else
