@@ -9,7 +9,7 @@ public class PalindromeCorrect {
 		int i=0;
 		int j=a.length()-1;
 		
-	    while(a.charAt(i)==a.charAt(j) && (i++)<=(j--));
+	    while((i)<=(j) && a.charAt(i++)==a.charAt(j--));
 	    System.out.println(i>=j?"Yes":"No");
 	}
 
