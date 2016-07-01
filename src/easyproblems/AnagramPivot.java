@@ -1,7 +1,6 @@
 package easyproblems;
 
 import java.util.*;
-import java.lang.*;
 
 public class AnagramPivot {
 	public static void main(String[] args) {
@@ -9,7 +8,7 @@ public class AnagramPivot {
 		String a = sc.next();
 		String b = sc.next();
 		if (a.length() != b.length()) {
-			System.out.println("Not Anagrams");
+			System.out.println("Not Anagram");
 			System.exit(0);
 		} else {
 
@@ -17,7 +16,7 @@ public class AnagramPivot {
 			int CounterB = 0;
 			a = a.toLowerCase();
 			b = b.toLowerCase();
-			
+
 			for (int j = 0; j < a.length(); j++) {
 				char pivot = a.charAt(j);
 				for (int i = 0; i < a.length(); i++) {
@@ -30,16 +29,15 @@ public class AnagramPivot {
 				for (int k = 0; k < b.length(); k++) {
 					if (pivot == b.charAt(k)) {
 						CounterB++;
-					}else{
+					} else {
 						break;
 					}
-					
+
 				}
-				if(CounterA==CounterB){
+				if (CounterA == CounterB) {
 					System.out.println("Anagrams");
-					
-				}
-				else{
+
+				} else {
 					System.out.println("Not Anagrams");
 				}
 			}
