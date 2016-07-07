@@ -10,19 +10,30 @@ public class AnagramWrong {
 		String b = sc.next();
 		int al[] = new int[26];
 		for (int i = 0; i < al.length; i++) {
-			System.out.println(al[i]);
+			
 			char[] c = (a.toLowerCase().toCharArray());
 			char[] d = b.toLowerCase().toCharArray();
 			for (int j = 0; j < c.length; j++) {
-				if (c.equals(j) == al.equals(j - i)) {
+				if (c.equals(al[i])) {
 					i++;
 				}
-				System.out.println(c[j]);
-				
+				for (int k=0; k<d.length;k++){
+					if(d.equals(al[i])){
+						i--;
+					}
+				}
 				
 			}
-
+			
+}
+		if(i!=0)
+			
+		{
+			System.out.println("Not Anagram");
 		}
+		
+		else System.out.println("Yes");
+
 
 	}
 }
