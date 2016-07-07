@@ -2,31 +2,27 @@ package easyproblems;
 
 import java.util.Scanner;
 
-public class AnagramWrong{
-	public static void main (String[]args){
-		Scanner sc=new Scanner(System.in);
-		String a=sc.next();
-		String b=sc.next();
-		char[] alphabets=new char[26];
-		char[] c=a.toCharArray();
-		char[] d=b.toCharArray();
-		
-		
-		for(int i=0;i<alphabets.length;i++){
-			for(int j=0;j<c.length;j++){
-				char insertIndex =(char) i;
-				int i1=j;
+public class AnagramWrong {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		String a = sc.next();
+		String b = sc.next();
+		int al[] = new int[26];
+		for (int i = 0; i < al.length; i++) {
+			System.out.println(al[i]);
+			char[] c = (a.toLowerCase().toCharArray());
+			char[] d = b.toLowerCase().toCharArray();
+			for (int j = 0; j < c.length; j++) {
+				if (c.equals(j) == al.equals(j - i)) {
+					i++;
 				}
-			for (int k=0; k<b.length();k++){
-				for (k=0;k<b.length();i--);
+				System.out.println(c[j]);
+				
+				
 			}
-		if(i==0){
-			System.out.println("Anagram");
-		}else
-			System.out.println("Not Anagram");
+
 		}
+
 	}
 }
-		
-		
-	
