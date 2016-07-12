@@ -1,25 +1,46 @@
 package easyproblems;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Latest {
 	public static void main(String[] args) {
-		  int[] intArray=new int[6];
-		  int i = 0;
-		  String s = "abcde";
-		  int strLength = s.length();
-		  if(strLength != 6) {
-		    System.out.println("Not a valid length");
-		  } else {
-		    for(i=0;i<6;i++) {
-		      if (!Character.isDigit(s.charAt(i))) {
-		        System.out.println("Contains an invalid digit");
-		        break;
-		      }
-		      intArray[i] = Integer.parseInt(String.valueOf(s.charAt(i)));
-		    }
-		  }
-		  System.out.println(Arrays.toString(intArray));
+
+		Scanner sc = new Scanner(System.in);
+		String a = sc.next().toLowerCase();
+		String b = sc.next().toLowerCase();
+
+		char a1[] = a.toCharArray();
+		char b1[] = b.toCharArray();
+
+		if (a.length() != b.length()) {
+			System.out.println("Not Anagrams");
+			System.exit(0);
+		} else {
+			//int i;
+			int[] alpha = new int[26];
+			/* int k = 0; */
+
+			/*for (i = 'a'; i <= 'z'; i++) {
+				alpha[i - 'a'] = ((char) i);*/
+				/* alpha[i]=((char)i); }*/
+			//i = 0;
+			for (int j = 0; j < a1.length; j++) {
+				alpha[a1[j] - 'a']++;
+			}
+			for (int n = 0; n < b1.length; n++) {
+					alpha[b1[n] - 'a']--;
+			}
+			
+            for(int i=0; i < alpha.length; i++){
+            	if(alpha[i] < 0){
+            		System.out.println("not anagram");
+            		System.exit(0);
+            	}
+            }
+				System.out.println("Anagrams");
 		}
 
+	}
+
 }
+
