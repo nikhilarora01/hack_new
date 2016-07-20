@@ -25,7 +25,7 @@ public class AnagramWrong {
 				
 			}
 			
-}
+
 		if(i!=0)
 			
 		{
@@ -36,4 +36,5 @@ public class AnagramWrong {
 
 
 	}
+}
 }
