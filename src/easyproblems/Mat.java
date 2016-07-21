@@ -12,19 +12,20 @@ public class Mat {
 		int col=sc.nextInt();
         int[][] mat = new int[row][col];
         System.out.println("Enter" +" "+ row*col+" " +"elements"); 
-        for(int cinput = 0; cinput < mat.length; cinput++) //column 
+        for(int i = 0; i < mat.length; i++) 
         { 
-                for(int rinput = 0; rinput < mat.length; rinput++) //row 
+                for(int j = 0; j < mat.length; j++)  
                 { 
-                        mat[cinput][rinput] = sc.nextInt(); //This will read the line of integers and fill all 9 positions in the array. 
+                        mat[i][j] = sc.nextInt(); 
+                       
                 } 
         } 
         
-        for(int column = 0; column < mat.length; column++) 
+      for(int i = 0; i < mat.length; i++) 
         { 
-                for(int arow = 0; arow < mat.length; arow++) 
+                for(int j = 0; j < mat.length; j++) 
                 { 
-                        System.out.print(mat[column][arow] + " "); //Outputs the array in a 3x3 grid. 
+                        System.out.print(mat[i][j] + " "); 
                 } 
                 System.out.println(); 
         }
